@@ -244,6 +244,7 @@ sub _jresponse_from_wsresponse {
 
   if (defined $error) {
     return JMAP::Tester::WebSocket::Result::Failure->new(
+      diagnostic_dumper => $self->default_diagnostic_dumper,
       ws_response => $ws_res,
       ident => $error,
     );
@@ -261,6 +262,7 @@ sub _jresponse_from_wsresponse {
   }
 
   return JMAP::Tester::WebSocket::Response->new({
+    diagnostic_dumper => $self->default_diagnostic_dumper,
     items               => $items,
     ws_response         => $ws_res,
     wrapper_properties  => $props,
