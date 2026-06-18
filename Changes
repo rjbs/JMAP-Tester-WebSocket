@@ -2,6 +2,11 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+        - Require (and cope with) JMAP::Tester@0.110 which provides diagnostic
+          dumpering and an abort method to all result types
+
+0.005     2025-12-17 14:11:42-05:00 America/New_York
+
         - Log requests/responses if JMAP_TESTER_LOGGER is set
         - Add a `timeout` attribute (default 30s) to avoid hanging forever
 
